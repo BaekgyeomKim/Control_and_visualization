@@ -1,4 +1,4 @@
-#include <Servo.h>
+#include<Servo.h>
 
 Servo servo;
 
@@ -17,12 +17,11 @@ void setup() {
 }
 
 void loop() {
-  Switchstate = 
-  Serial.print(digitalRead(Switch));
-
-  if (Switchstate == 0) {
+  Switchstate = Serial.println(digitalRead(Switch));
+  
+  if (digitalRead(Switch) == 0) {
     if (motor_angle < 180){
-      motor_angle = motor_angle+10;  
+      motor_angle = motor_angle+5;  
     }
   }
   servo.write(motor_angle);
