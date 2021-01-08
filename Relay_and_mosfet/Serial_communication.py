@@ -3,7 +3,7 @@ from matplotlib import pyplot as plt
 from matplotlib import animation
 import numpy as np
 
-arduino = serial.Serial('/dev/tty.usbmodem14401', 115200)
+arduino = serial.Serial('/dev/ttyACM0', 9600)
 
 fig = plt.figure()
 ax = plt.axes(xlim=(0, 50), ylim=(0, 30))
